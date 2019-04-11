@@ -4,15 +4,10 @@ export class Post {
 	loveIts: number;
 	created_at: Date;
 
-	constructor(theTitle: string = "Pas de Titre"){
+	constructor(theTitle: string = "Pas de Titre", theContent: string = "Cet article n'est pas encore rédigé !"){
 		this.title = theTitle;
-		this.content = "Cet article n'est pas encore rédigé !";
+		this.content = theContent;
 		this.loveIts = 0;
 		this.created_at = new Date();
 	}
-
-	setLoveIts(addLove: boolean = true){
-		this.loveIts += (addLove) ? 1 : -1;
-		console.log('plop');
-	};
 }
